@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: "Aktiv Grotesk", system-ui, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+            padding-top: 60px; /* Add padding to body to account for fixed navbar */
+        }
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #333;
+            text-decoration: none;
+        }
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+        .nav-links a {
+            color: #333;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        .lets-talk-btn {
+            background-color: white;
+            color: #4CAF50;
+            border: 2px solid #4CAF50;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .lets-talk-btn:hover {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .blog {
+            display: flex;
+            padding: 2% 4%;
+        }
+        .left {
+            width: 50%;
+            padding-right: 2%;
+        }
+        .main-blog {
+            position: sticky;
+            top: 80px; /* Adjust based on navbar height */
+        }
+        .main-img {
+            width: 100%;
+            height: 0;
+            padding-bottom: 60%; /* Maintain aspect ratio */
+            background-color: #f0f0f0;
+            background-image: url(t1.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        .main-head h1 {
+            font-size: calc(24px + 1vw);
+            font-weight: 600;
+            margin: 20px 0;
+        }
+        .sub-head h3 {
+            font-size: calc(14px + 0.5vw);
+            font-weight: 400;
+        }
+        .right {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .side-blog {
+            display: flex;
+            border-left: 1px solid #ddd;
+        }
+        .small-img {
+            width: 30%;
+            aspect-ratio: 16/9;
+            background-color: #f0f0f0;
+            background-image: url(t1.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        .small-txt {
+            width: 70%;
+            padding-left: 20px;
+            display: flex;
+            align-items: center;
+        }
+        .small-txt h3 {
+            font-size: calc(16px + 0.25vw);
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="#" class="logo">Noctu</a>
+        <div class="nav-links">
+            <a href="./index.html">Home</a>
+            <a href="/index.html">About</a>
+            <a href="/index.html">Services</a>
+            <a href="/index.html">Features</a>
+            <a href="/blog_list.html">Blog</a>
+            <a href="/index.html">Contact Us</a>
+        </div>
+        <button class="lets-talk-btn">LETS TALK</button>
+    </nav>
+   
+    <div   class="blog">
+        <div class="left">
+            <div class="main-blog" href="/blog.html" >
+                <div class="main-img"></div>
+                <div class="main-head"  >    
+                    <h1 href="/blog.html" >Invision design collaboration services shutdown</h1>              
+                </div>
+                <div class="sub-head">
+                    <h3>InVision Community,  Today I am writing to share that after careful consideration we have made the difficult decision to discontinue […]</h3>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <!-- Repeat this block 7 times for side blogs -->
+            <div  href="/blog.html" class="side-blog">
+                <div class="small-img"></div>
+                <div class="small-txt">
+                    <h3>InVision Community check url</h3>
+                </div>
+            </div>
+            <!-- ... -->
+            <div href="/blog.html" class="side-blog">
+                <div class="small-img"></div>
+                <div class="small-txt">
+                    <h3>InVision Community check url</h3>
+                </div>
+            </div>
+            <div href="/blog.html"  class="side-blog">
+                <div class="small-img"></div>
+                <div class="small-txt">
+                    <h3>InVision Community check url</h3>
+                </div>
+            </div>
+            <div class="side-blog">
+                <div class="small-img"></div>
+                <div class="small-txt">
+                    <h3>InVision Community check url</h3>
+                </div>
+            </div>
+            <div class="side-blog">
+                <div class="small-img"></div>
+                <div class="small-txt">
+                    <h3>InVision Community check url</h3>
+                </div>
+            </div>
+            <div class="side-blog">
+                <div class="small-img"></div>
+                <div class="small-txt">
+                    <h3>InVision Community check url</h3>
+                </div>
+            </div>
+            <div class="side-blog">
+                <div class="small-img"></div>
+                <div class="small-txt">
+                    <h3>InVision Community check url</h3>
+                </div>
+            </div>
+            <div class="side-blog">
+                <div class="small-img"></div>
+                <div class="small-txt">
+                    <h3>InVision Community check url</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
