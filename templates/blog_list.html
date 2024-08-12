@@ -10,6 +10,8 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            text-decoration: none;
+            color: inherit;
         }
         body {
             font-family: "Aktiv Grotesk", system-ui, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
@@ -74,7 +76,7 @@
             height: 0;
             padding-bottom: 60%; /* Maintain aspect ratio */
             background-color: #f0f0f0;
-            background-image: url(t1.png);
+            background-image: url(static/images/t1.png);
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
@@ -102,7 +104,7 @@
             width: 30%;
             aspect-ratio: 16/9;
             background-color: #f0f0f0;
-            background-image: url(t1.png);
+            background-image: url(static/images/t1.png);
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
@@ -123,79 +125,43 @@
     <nav class="navbar">
         <a href="#" class="logo">Noctu</a>
         <div class="nav-links">
-            <a href="./index.html">Home</a>
-            <a href="/index.html">About</a>
-            <a href="/index.html">Services</a>
-            <a href="/index.html">Features</a>
-            <a href="/blog_list.html">Blog</a>
-            <a href="/index.html">Contact Us</a>
+            <a href="/">Home</a>
+            <a href="/">About</a>
+            <a href="/">Services</a>
+            <a href="/">Features</a>
+            <a href="/blog">Blog</a>
+            <a href="/">Contact Us</a>
         </div>
         <button class="lets-talk-btn">LETS TALK</button>
     </nav>
    
-    <div   class="blog">
+    <div class="blog">
         <div class="left">
-            <div class="main-blog" href="/blog.html" >
+            <a href="/blog">
+            <div class="main-blog" >
                 <div class="main-img"></div>
                 <div class="main-head"  >    
-                    <h1 href="/blog.html" >Invision design collaboration services shutdown</h1>              
+                    <h1 >Invision design collaboration services shutdown</h1>              
                 </div>
                 <div class="sub-head">
                     <h3>InVision Community,  Today I am writing to share that after careful consideration we have made the difficult decision to discontinue […]</h3>
                 </div>
             </div>
+            </a>
         </div>
         <div class="right">
+            
             <!-- Repeat this block 7 times for side blogs -->
-            <div  href="/blog.html" class="side-blog">
+            <a href="/blog">
+            <div class="side-blog">
                 <div class="small-img"></div>
                 <div class="small-txt">
                     <h3>InVision Community check url</h3>
                 </div>
             </div>
+        </a>
             <!-- ... -->
-            <div href="/blog.html" class="side-blog">
-                <div class="small-img"></div>
-                <div class="small-txt">
-                    <h3>InVision Community check url</h3>
-                </div>
-            </div>
-            <div href="/blog.html"  class="side-blog">
-                <div class="small-img"></div>
-                <div class="small-txt">
-                    <h3>InVision Community check url</h3>
-                </div>
-            </div>
-            <div class="side-blog">
-                <div class="small-img"></div>
-                <div class="small-txt">
-                    <h3>InVision Community check url</h3>
-                </div>
-            </div>
-            <div class="side-blog">
-                <div class="small-img"></div>
-                <div class="small-txt">
-                    <h3>InVision Community check url</h3>
-                </div>
-            </div>
-            <div class="side-blog">
-                <div class="small-img"></div>
-                <div class="small-txt">
-                    <h3>InVision Community check url</h3>
-                </div>
-            </div>
-            <div class="side-blog">
-                <div class="small-img"></div>
-                <div class="small-txt">
-                    <h3>InVision Community check url</h3>
-                </div>
-            </div>
-            <div class="side-blog">
-                <div class="small-img"></div>
-                <div class="small-txt">
-                    <h3>InVision Community check url</h3>
-                </div>
-            </div>
+            
         </div>
     </div>
 </body>

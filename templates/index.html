@@ -15,7 +15,8 @@
   <!-- 
     - custom css link
   -->
-  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" >
+
 
   <!-- 
     - google font link
@@ -29,7 +30,7 @@
   <!-- 
     - preload images
   -->
-  <link rel="preload" as="image" href="./assets/images/hero-banner.png">
+  <link rel="preload" as="image" href="{{ url_for('static', filename='images/hero-banner.png') }}">
 
 </head>
 
@@ -73,7 +74,7 @@
           </li>
 
           <li>
-            <a href="/blog_list.html" class="navbar-link" data-nav-link>Blog</a>
+            <a href="/blogs" class="navbar-link" data-nav-link>Blog</a>
           </li>
 
           <li>
@@ -137,7 +138,7 @@
           </div>
 
           <figure class="hero-banner has-before img-holder" style="--width: 650; --height: 650;">
-            <img src="./assets/images/hero-banner.png" width="650" height="650" alt="hero banner" class="img-cover">
+            <img src="{{ url_for('static', filename='images/hero-banner.png') }}" width="650" height="650" alt="hero banner" class="img-cover">
           </figure>
 
         </div>
@@ -155,7 +156,7 @@
         <div class="container">
 
           <figure class="about-banner">
-            <img src="./assets/images/about-banner.png" width="802" height="654" loading="lazy" alt="about banner"
+            <img src="{{ url_for('static', filename='images/about-banner.png') }}" width="802" height="654" loading="lazy" alt="about banner"
               class="w-100">
           </figure>
 
@@ -228,7 +229,7 @@
               <div class="service-card has-after">
 
                 <figure class="card-icon">
-                  <img src="./assets/images/service-1.png" width="140" height="140" loading="lazy"
+                  <img src="{{ url_for('static', filename='images/service-1.png') }}" width="140" height="140" loading="lazy"
                     alt="UI/UX Creative Design" class="img">
                 </figure>
 
@@ -256,7 +257,7 @@
               <div class="service-card has-after">
 
                 <figure class="card-icon">
-                  <img src="./assets/images/service-2.png" width="140" height="140" loading="lazy" alt="App Development"
+                  <img src="{{ url_for('static', filename='images/service-2.png') }}" width="140" height="140" loading="lazy" alt="App Development"
                     class="img">
                 </figure>
 
@@ -284,7 +285,7 @@
               <div class="service-card has-after">
 
                 <figure class="card-icon">
-                  <img src="./assets/images/service-3.png" width="140" height="140" loading="lazy"
+                  <img src="{{ url_for('static', filename='images/service-3.png') }}" width="140" height="140" loading="lazy"
                     alt="Professional Content Writer" class="img">
                 </figure>
 
@@ -312,7 +313,7 @@
               <div class="service-card has-after">
 
                 <figure class="card-icon">
-                  <img src="./assets/images/service-4.png" width="140" height="140" loading="lazy" alt="Graphic Design"
+                  <img src="{{ url_for('static', filename='images/service-4.png') }}" width="140" height="140" loading="lazy" alt="Graphic Design"
                     class="img">
                 </figure>
 
@@ -823,7 +824,7 @@
   <!-- 
     - custom js link
   -->
-  <script src="./assets/js/script.js"></script>
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 
   <!-- 
     - ionicon link
