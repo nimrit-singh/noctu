@@ -6,7 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex,nofollow">
-  <title>Noctu</title>
+  <meta name="keywords" content="web development, App development,web design, App development services" > 
+  <meta name="description" content="Noctu offers expert web development services. From custom websites to complex web applications">
+  <title>Noctu: Professional Web Development Services | Creative Digital Solutions</title>
 
   <!-- 
     - favicon
@@ -32,6 +34,112 @@
     - preload images
   -->
   <link rel="preload" as="image" href="{{ url_for('static', filename='images/hero-banner.png') }}">
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+
+    .btn-outline {
+        display: inline-block;
+        padding: 10px 20px;
+        border: 2px solid #007bff;
+        color: #007bff;
+        background-color: transparent;
+        border-radius: 5px;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    /* The popup form styling */
+    .popup-form {
+      z-index: 99999;
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for the overlay */
+    justify-content: center;
+    align-items: center;
+}
+
+    .form-container {
+    background-color: #fff; /* Solid white background for the form */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+    opacity: 1; /* Ensure the form itself is fully opaque */
+}
+
+    .form-container h2 {
+        margin-bottom: 20px;
+    }
+
+    .form-container input,
+    .form-container textarea {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .form-container button {
+        padding: 10px 20px;
+        border: none;
+        background-color: #007bff;
+        color: white;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    .form-container button:hover {
+        background-color: #0056b3;
+    }
+
+    .close-btn {
+        float: right;
+        font-size: 20px;
+        cursor: pointer;
+        color: #999;
+    }
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 </head>
 
@@ -75,11 +183,11 @@
           </li>
 
           <li>
-            <a href="/blogs" class="navbar-link" data-nav-link>Blog</a>
+            <a href="#" class="navbar-link" data-nav-link>Blog</a>
           </li>
 
           <li>
-            <a href="#" class="navbar-link" data-nav-link>Contact Us</a>
+            <a href="#" class="navbar-link" data-nav-link onclick="openPopup()">Contact Us</a>
           </li>
 
         </ul>
@@ -90,7 +198,7 @@
         <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
       </button>
 
-      <a href="#" class="btn-outline">Lets talk</a>
+      <a href="#" class="btn-outline" onclick="openPopup()" >Lets talk</a>
 
       <div class="overlay" data-nav-toggler data-overlay></div>
 
@@ -110,41 +218,27 @@
 
       <section class="section hero" id="home" aria-label="hero">
         <div class="container">
-
           <div class="hero-content">
-
-            <p class="hero-subtitle has-before">Wellcome to Our Agency</p>
-
-            <h1 class="h1 hero-title">Smart Ideas for your Brand are Here</h1>
-
+            <p class="hero-subtitle has-before">Welcome to Noctu</p>
+            <h1 class="h1 hero-title">Innovative Web & App Solutions for Your Digital Success</h1>
             <p class="hero-text">
-              Donec tincidunt lacinia diam, eu volutpat est sollicitudin at. Vestibulum ut mi tristi que, vulputate ante
-              quis, tempus
-              enim. Proin quis euismod purus. Suspen disse efficitur
-              aliquam enim sed consequat vulputate ante quis.
+              At Noctu, we craft cutting-edge web and mobile experiences that elevate your brand. Our expert team delivers tailored solutions in web development, app creation, and UI/UX design to drive your business forward in the digital landscape.
             </p>
-
             <div class="btn-group">
-              <a href="#" class="btn btn-primary">Discover More</a>
-
+              <a href="#" class="btn btn-primary">Explore Our Services</a>
               <button class="flex-btn">
-                <div class="btn-icon">
-                  <ion-icon name="play" aria-hidden="true"></ion-icon>
-                </div>
-
-                <span class="span">How it works</span>
+                <!-- <div class="btn-icon"> -->
+                  <!-- <ion-icon name="play" aria-hidden="true"></ion-icon> -->
+                <!-- </div> -->
+                <!-- <span class="span">Watch Our Process</span> -->
               </button>
             </div>
-
           </div>
-
           <figure class="hero-banner has-before img-holder" style="--width: 650; --height: 650;">
-            <img src="{{ url_for('static', filename='images/hero-banner.png') }}" width="650" height="650" alt="hero banner" class="img-cover">
+            <img src="{{ url_for('static', filename='images/hero-banner.png') }}" width="650" height="650" alt="Noctu digital solutions" class="img-cover">
           </figure>
-
         </div>
       </section>
-
 
 
 
@@ -155,55 +249,37 @@
 
       <section class="section about" id="about" aria-label="about">
         <div class="container">
-
           <figure class="about-banner">
-            <img src="{{ url_for('static', filename='images/about-banner.png') }}" width="802" height="654" loading="lazy" alt="about banner"
-              class="w-100">
+            <img src="{{ url_for('static', filename='images/about-banner.png') }}" width="802" height="654" loading="lazy" alt="Noctu team at work" class="w-100">
           </figure>
-
           <div class="about-content">
-
-            <h2 class="h2-sm section-title">We create some things, Design for your success future.</h2>
-
+            <h2 class="h2-sm section-title">Empowering Businesses with Advanced Digital Solutions</h2>
             <p class="section-text">
-              Lorem Ipsum is simply dumm of free available in market the way printing and typesetting industry has been
-              the industrys
-              standard dummy text ever.
+              Noctu is a leading digital agency specializing in web development, app creation, and UI/UX design. We combine technical expertise with creative innovation to deliver powerful, user-centric digital experiences that drive growth and engagement for our clients.
             </p>
-
             <ul class="about-list">
-
               <li class="has-before">
-                Price of additional materials or parts (if needed)
+                Custom Web Development: Responsive, scalable websites and web applications
               </li>
-
               <li class="has-before">
-                Transportation cost for carrying new materials/parts
+                Mobile App Development: Native and cross-platform solutions for iOS and Android
               </li>
-
               <li class="has-before">
-                You will get 100% money back offer.
+                UI/UX Design: Intuitive, visually stunning interfaces that enhance user engagement
               </li>
-
             </ul>
-
             <div class="btn-group">
-              <a href="#" class="btn btn-primary">Know More</a>
-
+              <a href="#" class="btn btn-primary" onclick="openPopup()">Our Portfolio</a>
               <button class="flex-btn">
                 <div class="btn-icon">
                   <ion-icon name="medal-outline" aria-hidden="true"></ion-icon>
                 </div>
-
-                <span class="span">10+ Years Experience</span>
+                <span class="span">10+ Years of Digital Excellence</span>
               </button>
             </div>
-
           </div>
-
         </div>
       </section>
-
 
 
 
@@ -214,134 +290,82 @@
 
       <section class="section service" id="services" aria-label="service">
         <div class="container">
-
-          <p class="section-subtitle text-center">-What We Offer-</p>
-
-          <h2 class="h2 section-title text-center">Our Creative Services</h2>
-
+          <p class="section-subtitle text-center">-Our Expertise-</p>
+          <h2 class="h2 section-title text-center">Noctu's Professional Digital Services</h2>
           <p class="section-text text-center">
-            Get the most of reduction in your team’s operating costs for the whole product which creates amazing UI/UX
-            experiences.
+            Empower your business with Noctu's cutting-edge web development, app creation, and design solutions. We craft digital experiences that drive success.
           </p>
-
           <ul class="grid-list">
-
             <li>
               <div class="service-card has-after">
-
                 <figure class="card-icon">
-                  <img src="{{ url_for('static', filename='images/service-1.png') }}" width="140" height="140" loading="lazy"
-                    alt="UI/UX Creative Design" class="img">
+                  <img src="{{ url_for('static', filename='images/service-1.png') }}" width="140" height="140" loading="lazy" alt="Web Development" class="img">
                 </figure>
-
                 <div class="card-content">
-
-                  <h3 class="h3 card-title">UI/UX Creative Design</h3>
-
+                  <h3 class="h3 card-title">Web Development</h3>
                   <p class="card-text">
-                    Lorem ipsum dolor sit amet, consectetur adi piscing semper turpis. Nullam eget luctlie gula and
-                    adipiscing elit.
+                    From responsive websites to complex web applications, our expert developers create robust, scalable solutions tailored to your business needs.
                   </p>
-
                   <a href="#" class="btn-link">
-                    <span class="span">Read More</span>
-
+                    <span class="span">Learn More</span>
                     <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
                   </a>
-
                 </div>
-
               </div>
             </li>
-
             <li>
               <div class="service-card has-after">
-
                 <figure class="card-icon">
-                  <img src="{{ url_for('static', filename='images/service-2.png') }}" width="140" height="140" loading="lazy" alt="App Development"
-                    class="img">
+                  <img src="{{ url_for('static', filename='images/service-2.png') }}" width="140" height="140" loading="lazy" alt="App Development" class="img">
                 </figure>
-
                 <div class="card-content">
-
                   <h3 class="h3 card-title">App Development</h3>
-
                   <p class="card-text">
-                    Lorem ipsum dolor sit amet, consectetur adi piscing semper turpis. Nullam eget luctlie gula and
-                    adipiscing elit.
+                    Transform your ideas into powerful mobile applications. Our team develops intuitive, high-performance apps for iOS and Android platforms.
                   </p>
-
                   <a href="#" class="btn-link">
-                    <span class="span">Read More</span>
-
+                    <span class="span">Learn More</span>
                     <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
                   </a>
-
                 </div>
-
               </div>
             </li>
-
             <li>
               <div class="service-card has-after">
-
                 <figure class="card-icon">
-                  <img src="{{ url_for('static', filename='images/service-3.png') }}" width="140" height="140" loading="lazy"
-                    alt="Professional Content Writer" class="img">
+                  <img src="{{ url_for('static', filename='images/service-3.png') }}" width="140" height="140" loading="lazy" alt="UI/UX Design" class="img">
                 </figure>
-
                 <div class="card-content">
-
-                  <h3 class="h3 card-title">Professional Content Writer</h3>
-
+                  <h3 class="h3 card-title">UI/UX Design</h3>
                   <p class="card-text">
-                    Lorem ipsum dolor sit amet, consectetur adi piscing semper turpis. Nullam eget luctlie gula and
-                    adipiscing elit.
+                    Enhance user engagement with our expert UI/UX design services. We create visually stunning, user-friendly interfaces that elevate your digital presence.
                   </p>
-
                   <a href="#" class="btn-link">
-                    <span class="span">Read More</span>
-
+                    <span class="span">Learn More</span>
                     <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
                   </a>
-
                 </div>
-
               </div>
             </li>
-
             <li>
               <div class="service-card has-after">
-
                 <figure class="card-icon">
-                  <img src="{{ url_for('static', filename='images/service-4.png') }}" width="140" height="140" loading="lazy" alt="Graphic Design"
-                    class="img">
+                  <img src="{{ url_for('static', filename='images/service-4.png') }}" width="140" height="140" loading="lazy" alt="Digital Strategy" class="img">
                 </figure>
-
                 <div class="card-content">
-
-                  <h3 class="h3 card-title">Graphic Design</h3>
-
+                  <h3 class="h3 card-title">Digital Strategy</h3>
                   <p class="card-text">
-                    Lorem ipsum dolor sit amet, consectetur adi piscing semper turpis. Nullam eget luctlie gula and
-                    adipiscing elit.
+                    Maximize your online potential with our comprehensive digital strategies. We help you navigate the digital landscape and achieve your business goals.
                   </p>
-
                   <a href="#" class="btn-link">
-                    <span class="span">Read More</span>
-
+                    <span class="span">Learn More</span>
                     <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
                   </a>
-
                 </div>
-
               </div>
             </li>
-
           </ul>
-
-          <a href="#" class="btn btn-primary">Get Started</a>
-
+          <a href="#" class="btn btn-primary" onclick="openPopup()">Start Your Project</a>
         </div>
       </section>
 
@@ -352,109 +376,83 @@
       <!-- 
         - #FEATURES
       -->
-
       <section class="section features" id="features" aria-label="features">
         <div class="container">
-
-          <p class="section-subtitle text-center">-Why Choose Us-</p>
-
-          <h2 class="h2 section-title text-center">Reasons to Choose Us</h2>
-
+      
+          <p class="section-subtitle text-center">-Why Choose Noctu-</p>
+      
+          <h2 class="h2 section-title text-center">Reasons to Partner with Noctu</h2>
+      
           <p class="section-text text-center">
-            Get the most of reduction in your team’s operating costs for the whole product which creates amazing UI/UX
-            experiences.
+            Experience the Noctu difference. We combine technical expertise, creative innovation, and strategic thinking to deliver exceptional digital solutions that drive your business forward.
           </p>
-
+      
           <ul class="grid-list">
-
+      
             <li>
               <div class="features-card">
-
                 <data class="card-number" value="01">01</data>
-
-                <h3 class="h3 card-title">Free Icon Plugin</h3>
-
+                <h3 class="h3 card-title">Expert Development Team</h3>
                 <p class="card-text">
-                  Nullam ullamcorper condimentum urna eu accumsan.
+                  Our skilled developers stay at the forefront of web and app technologies to deliver cutting-edge solutions.
                 </p>
-
               </div>
             </li>
-
+      
             <li>
               <div class="features-card">
-
                 <data class="card-number" value="02">02</data>
-
-                <h3 class="h3 card-title">Free 6 Month Support</h3>
-
+                <h3 class="h3 card-title">User-Centric Design</h3>
                 <p class="card-text">
-                  Nullam ullamcorper condimentum urna eu accumsan.
+                  We create intuitive, visually stunning interfaces that enhance user engagement and satisfaction.
                 </p>
-
               </div>
             </li>
-
+      
             <li>
               <div class="features-card">
-
                 <data class="card-number" value="03">03</data>
-
-                <h3 class="h3 card-title">Customer Strategy</h3>
-
+                <h3 class="h3 card-title">Tailored Solutions</h3>
                 <p class="card-text">
-                  Nullam ullamcorper condimentum urna eu accumsan.
+                  Every project is customized to meet your unique business needs and objectives.
                 </p>
-
               </div>
             </li>
-
+      
             <li>
               <div class="features-card">
-
                 <data class="card-number" value="04">04</data>
-
-                <h3 class="h3 card-title">Best Premimum Image</h3>
-
+                <h3 class="h3 card-title">Agile Development Process</h3>
                 <p class="card-text">
-                  Nullam ullamcorper condimentum urna eu accumsan.
+                  Our flexible approach ensures rapid development, frequent updates, and continuous improvement.
                 </p>
-
               </div>
             </li>
-
+      
             <li>
               <div class="features-card">
-
                 <data class="card-number" value="05">05</data>
-
-                <h3 class="h3 card-title">Most Advanced Features</h3>
-
+                <h3 class="h3 card-title">Comprehensive Digital Strategy</h3>
                 <p class="card-text">
-                  Nullam ullamcorper condimentum urna eu accumsan.
+                  We offer end-to-end solutions, from concept to launch and beyond, aligning technology with your business goals.
                 </p>
-
               </div>
             </li>
-
+      
             <li>
               <div class="features-card">
-
                 <data class="card-number" value="06">06</data>
-
-                <h3 class="h3 card-title">Very Reasonable Price</h3>
-
+                <h3 class="h3 card-title">Ongoing Support & Maintenance</h3>
                 <p class="card-text">
-                  Nullam ullamcorper condimentum urna eu accumsan.
+                  We provide continuous support to ensure your digital solutions remain secure, up-to-date, and high-performing.
                 </p>
-
               </div>
             </li>
-
+      
           </ul>
-
+      
         </div>
-      </section>
+      </section> 
 
 
 
@@ -466,172 +464,102 @@
 
       <section class="section faq" aria-label="frequently asked questions">
         <div class="container">
-
           <div class="title-wrapper">
-            <h2 class="h2 section-title">Discover Frequently Asked Questions?</h2>
-
-            <a href="#" class="btn btn-primary">Work Together</a>
+            <h2 class="h2 section-title">Frequently Asked Questions About Noctu's Services</h2>
+            <a href="#" class="btn btn-primary" onclick="openPopup()">Contact Us</a>
           </div>
-
           <ul class="grid-list">
-
             <li>
               <div class="faq-card">
-
                 <button class="card-action" data-accordion-action>
                   <h3 class="h3 card-title">
-                    01. Curious about how to build your own UX strategy? Here are five simple steps.
+                    01. What types of web development services does Noctu offer?
                   </h3>
-
                   <div class="action-icon">
                     <ion-icon name="add-outline" aria-hidden="true" class="open"></ion-icon>
                     <ion-icon name="remove-outline" aria-hidden="true" class="close"></ion-icon>
                   </div>
                 </button>
-
                 <div class="card-content">
                   <p>
-                    Morbi aliquam quis quam in luctus. Nullam tincidunt pulvinar imperdiet. Sed varius, diam vitae
-                    posuere semper, libero ex
-                    hendrerit nunc, ac sagittis eros metus ut diam. Donec a nibh in libero maximus vehicula. Etiam sit
-                    amet condimentum
-                    erat. Pellentesque ultrices sagittis turpis, quis tempus ante viverra et.Morbi aliquam quis quam in
-                    luctus. Nullam
-                    tincidunt pulvinar imperdiet. Sed varius, diam vitae posuere semper, tincidunt pulvinar imperdiet.
-                    Sed varius, diam
-                    vitae posuere semper.
+                    Noctu offers a wide range of web development services, including custom website design, e-commerce solutions, web application development, content management systems (CMS), and responsive design. We specialize in creating scalable, high-performance websites that meet the unique needs of each client.
                   </p>
                 </div>
-
               </div>
             </li>
-
             <li>
               <div class="faq-card">
-
                 <button class="card-action" data-accordion-action>
                   <h3 class="h3 card-title">
-                    02. Where Could a Career in UX Take You? Agency vs. In-House vs. Freelance?
+                    02. Can Noctu develop both iOS and Android mobile apps?
                   </h3>
-
                   <div class="action-icon">
                     <ion-icon name="add-outline" aria-hidden="true" class="open"></ion-icon>
                     <ion-icon name="remove-outline" aria-hidden="true" class="close"></ion-icon>
                   </div>
                 </button>
-
                 <div class="card-content">
                   <p>
-                    Morbi aliquam quis quam in luctus. Nullam tincidunt pulvinar imperdiet. Sed varius, diam vitae
-                    posuere semper, libero ex
-                    hendrerit nunc, ac sagittis eros metus ut diam. Donec a nibh in libero maximus vehicula. Etiam sit
-                    amet condimentum
-                    erat. Pellentesque ultrices sagittis turpis, quis tempus ante viverra et.Morbi aliquam quis quam in
-                    luctus. Nullam
-                    tincidunt pulvinar imperdiet. Sed varius, diam vitae posuere semper, tincidunt pulvinar imperdiet.
-                    Sed varius, diam
-                    vitae posuere semper.
+                    Yes, Noctu has expertise in developing mobile applications for both iOS and Android platforms. We offer native app development for each platform, as well as cross-platform solutions using frameworks like React Native or Flutter, depending on your project requirements and goals.
                   </p>
                 </div>
-
               </div>
             </li>
-
             <li>
               <div class="faq-card">
-
                 <button class="card-action" data-accordion-action>
                   <h3 class="h3 card-title">
-                    03. What Is a Problem Statement in UX? (And How To Write One?
+                    03. How does Noctu approach UI/UX design for web and mobile projects?
                   </h3>
-
                   <div class="action-icon">
                     <ion-icon name="add-outline" aria-hidden="true" class="open"></ion-icon>
                     <ion-icon name="remove-outline" aria-hidden="true" class="close"></ion-icon>
                   </div>
                 </button>
-
                 <div class="card-content">
                   <p>
-                    Morbi aliquam quis quam in luctus. Nullam tincidunt pulvinar imperdiet. Sed varius, diam vitae
-                    posuere semper, libero ex
-                    hendrerit nunc, ac sagittis eros metus ut diam. Donec a nibh in libero maximus vehicula. Etiam sit
-                    amet condimentum
-                    erat. Pellentesque ultrices sagittis turpis, quis tempus ante viverra et.Morbi aliquam quis quam in
-                    luctus. Nullam
-                    tincidunt pulvinar imperdiet. Sed varius, diam vitae posuere semper, tincidunt pulvinar imperdiet.
-                    Sed varius, diam
-                    vitae posuere semper.
+                    At Noctu, we follow a user-centered design approach. Our UI/UX process involves thorough research, user persona development, wireframing, prototyping, and iterative design. We focus on creating intuitive, visually appealing interfaces that enhance user engagement and satisfaction while aligning with your brand identity.
                   </p>
                 </div>
-
               </div>
             </li>
-
             <li>
               <div class="faq-card">
-
                 <button class="card-action" data-accordion-action>
                   <h3 class="h3 card-title">
-                    04. There are several techniques UX designers employ to arrive at a succinct?
+                    04. What sets Noctu apart from other digital service providers?
                   </h3>
-
                   <div class="action-icon">
                     <ion-icon name="add-outline" aria-hidden="true" class="open"></ion-icon>
                     <ion-icon name="remove-outline" aria-hidden="true" class="close"></ion-icon>
                   </div>
                 </button>
-
                 <div class="card-content">
                   <p>
-                    Morbi aliquam quis quam in luctus. Nullam tincidunt pulvinar imperdiet. Sed varius, diam vitae
-                    posuere semper, libero ex
-                    hendrerit nunc, ac sagittis eros metus ut diam. Donec a nibh in libero maximus vehicula. Etiam sit
-                    amet condimentum
-                    erat. Pellentesque ultrices sagittis turpis, quis tempus ante viverra et.Morbi aliquam quis quam in
-                    luctus. Nullam
-                    tincidunt pulvinar imperdiet. Sed varius, diam vitae posuere semper, tincidunt pulvinar imperdiet.
-                    Sed varius, diam
-                    vitae posuere semper.
+                    Noctu distinguishes itself through its comprehensive approach to digital solutions. We combine technical expertise with creative design and strategic thinking. Our team stays updated with the latest technologies and industry trends, ensuring that our clients receive cutting-edge solutions. We also prioritize clear communication and collaborative relationships with our clients throughout the project lifecycle.
                   </p>
                 </div>
-
               </div>
             </li>
-
             <li>
               <div class="faq-card">
-
                 <button class="card-action" data-accordion-action>
                   <h3 class="h3 card-title">
-                    05. What are the obstacles users are facing? What are they trying to do?
+                    05. How does Noctu ensure the security and performance of web and mobile applications?
                   </h3>
-
                   <div class="action-icon">
                     <ion-icon name="add-outline" aria-hidden="true" class="open"></ion-icon>
                     <ion-icon name="remove-outline" aria-hidden="true" class="close"></ion-icon>
                   </div>
                 </button>
-
                 <div class="card-content">
                   <p>
-                    Morbi aliquam quis quam in luctus. Nullam tincidunt pulvinar imperdiet. Sed varius, diam vitae
-                    posuere semper, libero ex
-                    hendrerit nunc, ac sagittis eros metus ut diam. Donec a nibh in libero maximus vehicula. Etiam sit
-                    amet condimentum
-                    erat. Pellentesque ultrices sagittis turpis, quis tempus ante viverra et.Morbi aliquam quis quam in
-                    luctus. Nullam
-                    tincidunt pulvinar imperdiet. Sed varius, diam vitae posuere semper, tincidunt pulvinar imperdiet.
-                    Sed varius, diam
-                    vitae posuere semper.
+                    Security and performance are top priorities at Noctu. We implement best practices in secure coding, conduct regular security audits, and use industry-standard encryption methods. For performance, we optimize code, use efficient database queries, implement caching strategies, and conduct thorough testing to ensure fast load times and smooth user experiences across all devices and platforms.
                   </p>
                 </div>
-
               </div>
             </li>
-
           </ul>
-
         </div>
       </section>
 
@@ -716,7 +644,7 @@
           </li>
 
           <li>
-            <a href="#" class="footer-link">Our Portfolio</a>
+            <a href="#" class="footer-link" onclick="openPopup()">Our Portfolio</a>
           </li>
 
           <li>
@@ -743,14 +671,14 @@
             <ion-icon name="location" aria-hidden="true"></ion-icon>
 
             <address class="contact-link address">
-              4517 Washington Ave. Manchester, Kentucky 39495
+             Meerut, India
             </address>
           </li>
 
           <li class="footer-item">
             <ion-icon name="call" aria-hidden="true"></ion-icon>
 
-            <a href="tel:+7894631546876" class="contact-link">+7894631546876</a>
+            <a href="tel:+7894631546876" class="contact-link">+91 9538232723</a>
           </li>
 
           <li class="footer-item">
@@ -832,6 +760,70 @@
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+
+
+
+  <script>
+    function openPopup() {
+        document.getElementById("popupForm").style.display = "flex";
+    }
+
+    function closePopup() {
+        document.getElementById("popupForm").style.display = "none";
+    }
+
+    function handleSubmit() {
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+
+        if (email && message) {
+            alert('Your message has been sent!');
+            closePopup();
+            return true;
+        } else {
+            alert('Please fill in all fields.');
+            return false;
+        }
+    }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Popup form -->
+  <div class="popup-form" id="popupForm">
+      <div class="form-container">
+          <span class="close-btn" onclick="closePopup()">&times;</span>
+          <h2>Contact Us</h2>
+          <form action="/email" method="POST" onsubmit="return handleSubmit()">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required>
+
+              <label for="message">Message:</label>
+              <textarea id="message" name="message" rows="4" required></textarea>
+
+              <button type="submit">Send</button>
+          </form>
+      </div>
+  </div>
 
 </body>
 
