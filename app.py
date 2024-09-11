@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template,request,redirect
 import json 
 import smtplib
 from email.message import EmailMessage
@@ -39,6 +39,6 @@ def email():
     send("namitjain2111@gmail.com", "namitjain2111@gmail.com",email,message)
     
     print(email,message)
-    return "success"
+    return redirect("/")
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0")
